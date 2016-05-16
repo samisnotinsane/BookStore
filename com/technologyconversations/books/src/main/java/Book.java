@@ -59,4 +59,21 @@ public class Book implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+
+        Book book = (Book) o;
+
+        if(id != book.id) return false;
+        if(imageUrl != book.imageUrl) return false;
+        if(title != book.title) return false;
+        if(author != book.author) return false;
+        if(price != book.price) return false;
+        if(link != book.link) return false;
+
+
+    }
 }
